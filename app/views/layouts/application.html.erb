@@ -18,6 +18,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </header
 
+  <nav class="logo">
+    <%= image_tag 'logo_1.png' %>
+  </nav>
 
   <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -81,12 +84,21 @@
             <li>
               <%= link_to 'Newsletter', welcome_index_path %>
             </li>
-            <li>
-              <%= link_to 'Counseling', welcome_index_path %>
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Consultation <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><%= link_to 'About', welcome_index_path %></li>
+                <li><%= link_to 'Sign up', welcome_index_path %></li>
+                <li class="divider"></li>
+              </ul>
             </li>
 
             <li><%= link_to 'Contact Us', welcome_index_path %></li>
-          </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+           <li><%= link_to 'Sign up', welcome_index_path %></li>
+         </ul>
 
 
         </div>
