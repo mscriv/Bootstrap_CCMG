@@ -2,13 +2,103 @@
 <html>
 <head>
   <title>BootstrapCcmg</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-<%= yield %>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </header
+
+
+  <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'Home', welcome_index_path %></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">About <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><%= link_to 'Leadership', welcome_index_path %></li>
+                <li><%= link_to 'Core Values', welcome_index_path %></li>
+                <li><%= link_to 'Company Profile', welcome_index_path %></li>
+                <li><%= link_to 'Government', welcome_index_path %></li>
+                <li><%= link_to 'Highlights', welcome_index_path %></li>
+
+              </ul>
+            </li>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Our Clients <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="themes">
+                  <li><%= link_to 'Small Business', welcome_index_path %></li>
+                  <li><%= link_to 'Corporate', welcome_index_path %></li>
+                  <li><%= link_to 'Government', welcome_index_path %></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Our Services <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="themes">
+                  <li><%= link_to 'Financial Management', welcome_index_path %></li>
+                  <li><%= link_to 'Business Services', welcome_index_path %></li>
+                  <li><%= link_to 'Government', welcome_index_path %></li>
+                  <li><%= link_to 'Corporate Services', welcome_index_path %></li>
+                </ul>
+              </li>
+
+
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Mastermind Group <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><%= link_to 'About', welcome_index_path %></a></li>
+                <li><a href="./cerulean/">Plans</a></li>
+                <li><a href="./cosmo/">Subscribe</a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+
+            <li>
+            <%= link_to 'Blog', welcome_index_path %>
+            </li>
+
+            <li>
+              <%= link_to 'Newsletter', welcome_index_path %>
+            </li>
+            <li>
+              <%= link_to 'Counseling', welcome_index_path %>
+            </li>
+
+            <li><%= link_to 'Contact Us', welcome_index_path %></li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <main role="main">
+  <%= yield %>
+</main
 
 </body>
 </html>
