@@ -77,12 +77,13 @@
               </ul>
             </li>
 
-            <li>
-            <%= link_to 'Blog', welcome_index_path %>
-            </li>
-
-            <li>
-              <%= link_to 'Newsletter', welcome_index_path %>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Literature <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><%= link_to 'Blog', welcome_index_path %></li>
+                <li><%= link_to 'Newsletter', welcome_index_path %></li>
+                <li class="divider"></li>
+              </ul>
             </li>
 
             <li class="dropdown">
@@ -97,20 +98,23 @@
             <li><%= link_to 'Contact Us', welcome_index_path %></li>
 
             <ul class="nav navbar-nav navbar-right">
-           <li><%= link_to 'Sign up', welcome_index_path %></li>
-         </ul>
-
+              <% if current_user %>
+            <li><%= link_to "Sign Out", signout_path%></li>
+                <% else %>
+                 <li><%= link_to 'Sign up', signup_path %></li>
+                 <% end %>
+           </ul>
 
         </div>
       </div>
     </div>
 
-
-
-
   <main role="main">
   <%= yield %>
 </main
+
+
+
 
 </body>
 </html>
